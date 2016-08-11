@@ -11,7 +11,10 @@ public class Main {
         PrintStream printStream = new PrintStream(System.out);
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
         List<String> spots = Arrays.asList("1", "2", "3", "4", "5", "6", "7", "8", "9");
-        Game game = new Game(printStream, bufferedReader, spots);
+        Board board = new Board(printStream, spots);
+        Player player1 = new Player(board, "X", bufferedReader, printStream);
+        Player player2 = new Player(board, "O", bufferedReader, printStream);
+        Game game = new Game(board, player1, player2);
         game.start();
     }
 }
