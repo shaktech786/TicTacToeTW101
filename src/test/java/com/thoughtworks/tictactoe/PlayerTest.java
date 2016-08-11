@@ -27,8 +27,8 @@ public class PlayerTest {
     @Test
     public void shouldPromptPlayerToMakeMove() throws IOException {
         player.makeMove();
-        verify(bufferedReader).readLine();
         verify(printStream).println("Where would you like to place your marker?");
+        verify(bufferedReader).readLine();
     }
 
     @Test

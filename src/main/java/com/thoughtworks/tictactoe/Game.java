@@ -13,7 +13,7 @@ public class Game {
         this.player1 = player1;
         this.player2 = player2;
         isOver = false;
-        turns = 5;
+        turns = 5; //temporary; implement isOver later
     }
 
     public void start() {
